@@ -12,6 +12,9 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
+// Serve static files from admin-web directory
+app.use(express.static(path.join(__dirname, "../admin-web")));
+
 /**
  * POST: /reverse-geocode
  * body: { latitude, longitude }
